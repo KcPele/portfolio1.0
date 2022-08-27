@@ -1,3 +1,19 @@
+
+interface imageI {
+  asset: {
+    _ref: string,
+    _type: string
+  }
+  _type: string
+}
+interface SimilarI {
+  name: string,
+  imgUrl: imageI,
+}
+
+export interface HeadI extends SimilarI {
+    _createdAt: string
+}
 export interface AboutInterface {
   title: string;
   description: string;
@@ -9,10 +25,8 @@ export interface TagI {
   _type: string;
   tag: string;
 }
-export interface WorkI {
+export interface WorkI extends SimilarI{
   title: string;
-  name: string;
-  imgUrl: string;
   description: string;
   tags: TagI[];
   projectLink: string;
@@ -33,8 +47,25 @@ export interface ExWorkI {
   name: string;
   company: string;
   desc: string;
+  _createdAt: string;
 }
 export interface ExperienceI {
   year: string;
   works: ExWorkI[];
+  _createdAt: string;
 }
+
+export interface TestimonialI extends SimilarI {
+  feedback: string,
+  company: string,
+}
+
+export interface BrandI extends SimilarI {
+    _id: string;
+}
+
+export interface FormI { 
+  username: string, 
+  email: string, 
+  message: string
+ }

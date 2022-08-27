@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 import { WorkI, AnimateI } from '../../models';
+import { NavigationDots, SocialMedia } from '../../components';
 
 const Work = () => {
   const [works, setWorks] = useState<WorkI[]>([]);
@@ -38,11 +39,18 @@ const Work = () => {
   };
 
   return (
-    <div id="work">
+    <motion.div
+    whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+    transition={{ duration: 0.5 }}
+    className=" app__works app__flex "
+  >
+    <div id="work" className="app__container app__primarybg">
+    <SocialMedia />
+    <div className="app__wrapper app__flex">
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['Next Js', 'Web App', 'Web3', 'React JS', 'Django', 'FastApi', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -105,7 +113,14 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
+      <div className="copyright">
+          <p className="p-text">@2020 KCPELE</p>
+          <p className="p-text">All rights reserved</p>
+        </div>
+      </div>
+      <NavigationDots active="work" />
     </div>
+    </motion.div>
   )
 };
 

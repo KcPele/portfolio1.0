@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 
 // import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
-
+import { NavigationDots, SocialMedia } from '../../components';
+import { client, urlFor } from '../../client';
+import { HeadI } from '../../models';
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -16,8 +18,18 @@ const scaleVariants = {
   },
 };
 const Header: React.FC = () => {
+  const [profile, setProfile] = useState<HeadI[]>([])
+  useEffect(() => {
+    const query = '*[_type == "profile"]'
+    client.fetch(query).then((data: HeadI[]) => {
+      setProfile(data)
+    })
+  }, [])
   return (
-<div id="home" className="app__header app__flex">
+  <div id="home" className="app__container ">
+    <SocialMedia />
+    <div className="app__wrapper app__flex">
+<div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
@@ -28,7 +40,10 @@ const Header: React.FC = () => {
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Kc Pele</h1>
+            {
+              profile.length && <h1 className="head-text">{profile[0].name }</h1>
+              
+            }
           </div>
         </div>
 
@@ -44,7 +59,10 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.profile} alt="profile_bg" />
+      {
+        profile.length && <img src={urlFor(profile[0].imgUrl).url()} alt="profile_bg" />
+        
+      }
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
@@ -66,6 +84,9 @@ const Header: React.FC = () => {
       ))}
     </motion.div>
   </div>
+  </div>
+      <NavigationDots active="home" />
+    </div>
   )
 }
 

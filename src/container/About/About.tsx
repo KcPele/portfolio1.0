@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 // import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
+import { NavigationDots, SocialMedia } from '../../components';
 interface AboutInterface {
   title: string
   description: string;
@@ -25,7 +26,14 @@ const About: React.FC = () => {
     });
   }, []);
   return (
-    <div id="about">
+    <motion.div
+    whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+    transition={{ duration: 0.5 }}
+    className=" app__about app__flex "
+  >
+    <div id="about" className="app__container app__whitebg">
+    <SocialMedia />
+    <div className="app__wrapper app__flex">
      <h2 className="head-text">I Know that <span>Good Development</span> <br />means  <span>Good Business</span></h2>
   
      <div className="app__profiles">
@@ -43,7 +51,14 @@ const About: React.FC = () => {
           </motion.div>
         ))}
       </div>
-  </div>
+      <div className="copyright">
+          <p className="p-text">@2020 KCPELE</p>
+          <p className="p-text">All rights reserved</p>
+        </div>
+      </div>
+      <NavigationDots active="about" />
+    </div>
+    </motion.div>
   )
 }
 

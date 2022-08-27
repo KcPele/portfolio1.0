@@ -1,6 +1,6 @@
 export default {
-    name:'testimonials',
-    title:'Testimonials',
+    name:'profile',
+    title:'Profile',
     type: 'document',
     fields:[
         { 
@@ -9,22 +9,12 @@ export default {
             type: 'string'
         },
         {
-            name:'company',
-            title:'Company',
-            type:'string'
-        },
-        {
             name:'imgUrl',
             title:'ImgUrl',
             type: 'image',
             options: {
               hotspot: true,
             },
-        },  
-        {
-            name:'feedback',
-            title:'Feedback',
-            type:'string'
         }
     ]
 }
