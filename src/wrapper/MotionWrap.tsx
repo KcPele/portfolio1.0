@@ -1,9 +1,19 @@
-import React from 'react'
-
-const MotionWrap = () => {
-  return (
-    <div>MotionWrap</div>
-  )
+import React from 'react';
+import { motion } from 'framer-motion';
+interface Props {
+  Component: React.FC
+  classNames: string
 }
+const MotionWrap = ({Component, classNames}: Props) => function HOC() {
+  return (
+    <motion.div
+      whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+      transition={{ duration: 0.5 }}
+      className={`${classNames} app__flex`}
+    >
+      <Component />
+    </motion.div>
+  );
+};
 
-export default MotionWrap
+export default MotionWrap;
