@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { client } from '../../client';
 import './Footer.scss';
-import { FormI } from '../../models';
+
 import { NavigationDots, SocialMedia } from '../../components';
 import { motion } from 'framer-motion';
 
