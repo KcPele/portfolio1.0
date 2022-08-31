@@ -60,7 +60,11 @@ const Header: React.FC = () => {
       className="app__header-img"
     >
       {
-        profile.length && <img src={urlFor(profile[0].imgUrl).url()} alt="profile_bg" />
+        profile.length && 
+        <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        src={urlFor(profile[0].imgUrl).url()} alt="profile_bg" />
         
       }
       <motion.img

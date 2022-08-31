@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   <nav className="app__navbar">
      <div className="app__navbar-logo">
         {/* <img src={images.logo} alt="logo" /> */}
-        <h1>MyLogo Here</h1>
+        <h1>Kcpele</h1>
       </div>
       <ul className="app__navbar-links">
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
