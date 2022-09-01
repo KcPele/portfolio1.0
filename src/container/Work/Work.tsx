@@ -50,7 +50,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['Next Js', 'Web App', 'Web3', 'React JS', 'Django', 'FastApi', 'All'].map((item, index) => (
+        {['HTML/CSS', 'Next Js', 'Web App', 'Web3', 'React JS', 'Django', 'FastApi', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -114,7 +114,7 @@ const Work = () => {
         ))}
       </motion.div>
       <div className="copyright">
-          <p className="p-text">@2020 KCPELE</p>
+          <p className="p-text">@2022 KCPELE</p>
           <p className="p-text">All rights reserved</p>
         </div>
       </div>

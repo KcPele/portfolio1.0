@@ -76,7 +76,7 @@ const Testimonial = () => {
       </div>
 
       <div className="copyright">
-          <p className="p-text">@2020 KCPELE</p>
+          <p className="p-text">@2022 KCPELE</p>
           <p className="p-text">All rights reserved</p>
         </div>
       </div>
