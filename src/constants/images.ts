@@ -39,7 +39,43 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+import page404 from '../assets/404.png';
+import taskcyapi from '../assets/taskcyapi.png';
+import taskcy from '../assets/taskcy.png';
+import simplegallary from '../assets/simplegallary.png';
+import restaurant from '../assets/restaurant.png';
+import portfoliov1 from '../assets/portfoliov1.png';
+import nibble1 from '../assets/nibble1.png';
+import mainstack from '../assets/mainstack.png';
+import metlab2 from '../assets/metlab2.png';
+import interior from '../assets/interior.png';
+import gpt3 from '../assets/gpt3.png';
+import etest from '../assets/etest.png';
+import ecommace from '../assets/ecommace.png';
+import dashboard from '../assets/dashboard.png';
+import creativecrew from '../assets/creativecrew.png';
+import checkout from '../assets/checkout.png';
+import cheesecake from '../assets/cheesecake.png';
+
+
 export default {
+  page404,
+  taskcyapi,
+  taskcy,
+  simplegallary,
+  restaurant,
+  portfoliov1,
+  nibble1,
+  mainstack,
+  metlab2,
+  interior,
+  gpt3,
+  etest,
+  ecommace,
+  dashboard,
+  creativecrew,
+  checkout,
+  cheesecake,
   email,
   mobile,
   api,
