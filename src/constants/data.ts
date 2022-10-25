@@ -3,7 +3,7 @@ import images from "./images";
 
 
 export const abouts = [
-  {id: 1,title: "web Developemnt", description: "I love building highly functional web apps that solves the present needs of individuals at large", imgUrl: images.about01},
+  // {id: 1,title: "web Developemnt", description: "I love building highly functional web apps that solves the present needs of individuals at large", imgUrl: images.about01},
   {id: 2, title: "Frontend Development", description: "I am a frontend developer with a passion for building beautiful and functional web site ", imgUrl: images.about02},
   {id: 3, title: "Backend Development", description: "A good understanding of what you need comes from the root(backend). I assist in writing backend codes and logic", imgUrl: images.about03},
   {id: 4, title: "Web3 Development", description: "The current shift in tech has made me master blockchain and also write and audit codes in the space", imgUrl: images.about04},
@@ -53,7 +53,7 @@ export const works = [
   {name: "", title:'Mini jumia Shopping App', imgUrl: images.ecommace, description: "A mini jumia shopping app clone", codeLink: 'https://github.com/KcPele/ecommace-with-stripe', projectLink: "https://minijumia.vercel.app/", tags: [{tag: "Next Js"}, {tag: 'Web App'}, {tag: "All"}]},
   {name: "", title:'Metlab', imgUrl: images.metlab2, description: "Online metadata viewer", codeLink: "https://github.com/KcPele/fetch-metadata-team-90", projectLink: "https://metlab.herokuapp.com", tags: [{tag: "Django"}, {tag: "Web App"}, {tag: "All"}]},
   {name: "", title:'Material/Tutorial WebApp', imgUrl: images.etest, description: "A mini E-test and library web app for Nigerian students", codeLink: 'https://github.com/KcPele/freeshers_django_app', projectLink: "https://materialcenter.herokuapp.com", tags: [{tag: "Django"}, {tag: "Web App"}, {tag: "All"}]},
-  {name: "", title:'404 NOT FOUND', imgUrl: images.about02, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/404_not_found', projectLink: "https://wizardly-khorana-19e375.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "Web Dev"}, {tag: "All"}]},
+  {name: "", title:'404 NOT FOUND', imgUrl: images.page404, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/404_not_found', projectLink: "https://wizardly-khorana-19e375.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "Web Dev"}, {tag: "All"}]},
   {name: "", title:'Classic Cheesecake Recipe', imgUrl: images.cheesecake, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/recipe-page-master', projectLink: "https://nostalgic-lewin-af8c77.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
   {name: "", title:'The creative crew', imgUrl: images.creativecrew, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/team_page_challenge', projectLink: "https://zen-swartz-d89524.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
   {name: "", title:'Modern interior', imgUrl: images.interior, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/interior_consultant_challenge', projectLink: "https://epic-babbage-54ccc1.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
