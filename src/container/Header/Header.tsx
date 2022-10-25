@@ -30,7 +30,7 @@ const Header: React.FC = () => {
       className="app__header-info"
     >
       <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
+        <motion.div drag className="badge-cmp app__flex">
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
@@ -39,12 +39,12 @@ const Header: React.FC = () => {
               
           
           </div>
-        </div>
+        </motion.div>
 
-        <div className="tag-cmp app__flex">
+        <motion.div drag className="tag-cmp app__flex">
           <p className="p-text">Web Developer</p>
           <p className="p-text">Freelancer</p>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
 
@@ -74,9 +74,9 @@ const Header: React.FC = () => {
       className="app__header-circles"
     >
       {[images.redux, images.react, images.python, images.sass].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
+        <motion.div drag className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
-        </div>
+        </motion.div>
       ))}
     </motion.div>
   </div>

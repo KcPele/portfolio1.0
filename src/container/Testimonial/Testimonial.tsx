@@ -28,7 +28,7 @@ const Testimonial = () => {
     <div className="app__wrapper app__flex">
       {testimonials.length && (
         <>
-          <div className="app__testimonial-item app__flex">
+          <motion.div drag className="app__testimonial-item app__flex">
             <img src={testimonials[currentIndex].imgUrl} alt={testimonials[currentIndex].name} />
             <div className="app__testimonial-content">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
@@ -37,7 +37,7 @@ const Testimonial = () => {
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div className="app__testimonial-btns app__flex">
             <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>

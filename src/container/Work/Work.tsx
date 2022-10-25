@@ -58,7 +58,7 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+          <motion.div drag className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
             >
@@ -101,7 +101,7 @@ const Work = () => {
                 <p className="p-text">{work.tags[0].tag}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         ))}
       </motion.div>

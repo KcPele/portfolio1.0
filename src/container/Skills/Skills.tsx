@@ -24,6 +24,7 @@ const Skills = () => {
             <motion.div className="app__skills-list">
               {skills.map((skill) => (
                 <motion.div
+                drag
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: 0.5 }}
                   className="app__skills-item app__flex"
@@ -42,6 +43,7 @@ const Skills = () => {
             <div className="app__skills-exp">
               {experiences.map((experience) => (
                 <motion.div
+                drag
                   className="app__skills-exp-item"
                   key={experience._createdAt}
                 >

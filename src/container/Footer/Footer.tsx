@@ -64,24 +64,24 @@ const Footer = () => {
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">
-        <div className="app__footer-card ">
+        <motion.div drag className="app__footer-card ">
           <img src={images.email} alt="email" />
           <a href="mailto:fidekg123@gmail.com" className="p-text">fidekg123@gmail.com</a>
-        </div>
-        <div className="app__footer-card">
+        </motion.div>
+        <motion.div drag className="app__footer-card">
           <img src={images.mobile} alt="phone" />
           <a href="tel:+234 7019 7365 90" className="p-text">+234 7019 7366 90</a>
-        </div>
+        </motion.div>
       </div>
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
-          <div className="app__flex">
+          <motion.div drag className="app__flex">
             <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-          </div>
-          <div className="app__flex">
+          </motion.div>
+          <motion.div drag className="app__flex">
             <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div drag>
             <textarea
               className="p-text"
               placeholder="Your Message"
@@ -89,7 +89,7 @@ const Footer = () => {
               name="message"
               onChange={(e) => setMessage(e.target.value)}
             />
-          </div>
+          </motion.div>
           <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
