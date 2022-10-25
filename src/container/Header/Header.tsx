@@ -54,10 +54,10 @@ const Header: React.FC = () => {
       className="app__header-img"
     >
     
-        <motion.img
+        {/* <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        src={images.profile} alt="profile_bg" />
+        src={images.profile} alt="profile_bg" /> */}
     
       {/* <motion.img
         whileInView={{ scale: [0, 1] }}

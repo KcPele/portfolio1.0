@@ -17,7 +17,7 @@ const Footer = () => {
 
  
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setLoading(true);
 
     const contact = {
@@ -26,13 +26,29 @@ const Footer = () => {
       email: email,
       message: message,
     };
+    console.log(contact)
     //handle the submission
+  fetch("https://portfolio-api-sonj.onrender.com/sendmail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
 
-      setLoading(false);
-      setIsFormSubmitted(true);
-      setUsername('')
-      setEmail('')
-      setMessage('')
+    },
+    body: JSON.stringify(contact)
+
+  }).then((res) => {
+    
+
+    setLoading(false);
+    setIsFormSubmitted(true);
+    setUsername('')
+    setEmail('')
+    setMessage('')
+  }).catch(err => {
+    setLoading(false)
+    console.log(err)
+  })
+
   };
 
   return (

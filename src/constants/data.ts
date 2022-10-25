@@ -1,4 +1,4 @@
-import { AboutInterface, BrandI, ExperienceI, SkillI, WorkI } from "../models";
+import { AboutInterface, ExperienceI, SkillI, WorkI } from "../models";
 import images from "./images";
 
 
@@ -59,12 +59,12 @@ export const works = [
   {name: "", title:'Modern interior', imgUrl: images.about02, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/interior_consultant_challenge', projectLink: "https://epic-babbage-54ccc1.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
   {name: "", title:'Simple Gallary', imgUrl: images.about02, description: "Dev.io challange", codeLink: 'https://github.com/KcPele/gallery-challenge', projectLink: "https://infallible-bose-b3188d.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
   {name: "", title:'Checkout Challange', imgUrl: images.about02, description: "Dev.io Challange", codeLink: 'https://github.com/KcPele/checkout-challange', projectLink: "https://stoic-brattain-b1f1a7.netlify.app/", tags: [{tag: "HTML/CSS"}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
-  // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
+  {name: "", title:'GPT3 Open Ai', imgUrl: images.about02, description: "Let’s Build Something amazing with GPT-3 Open Ai", codeLink: 'https://github.com/KcPele/gpt3-design', projectLink: "https://gpt3-ai123.netlify.app/", tags: [{tag: "Next Js"}, {tag: "Web Dev"}, {tag: "All"}]},
+  {name: "", title:'Portfolio', imgUrl: images.about02, description: "My old portfolio", codeLink: 'https://github.com/KcPele/django_internship_resume', projectLink: "https://kcpele.herokuapp.com/", tags: [{tag: "Django"}, {tag: "Web Dev"}, {tag: "All"}]},
+  {name: "", title:'Taskcy Api', imgUrl: images.about02, description: "Taskcy todo api", codeLink: 'https://github.com/KcPele/taskcyapi', projectLink: "https://taskcyapi.herokuapp.com/docs", tags: [{tag: "FastApi"}, {tag: "Web App"}, {tag: "All"}]},
+  {name: "", title:'Taskcy', imgUrl: images.about02, description: "Taskcy Todo app", codeLink: 'https://github.com/KcPele/taskcyTodo', projectLink: "https://taskcy.vercel.app/", tags: [{tag: "React JS"}, {tag: "Typescript"}, {tag: "Web App"}, {tag: "All"}]},
+  {name: "", title:'Nibbl.', imgUrl: images.about02, description: "Manage your space easily with Nibbl.", codeLink: 'https://github.com/KcPele/nibbl', projectLink: "https://nibbl-eight.vercel.app/", tags: [{tag: "Next Js"}, {tag: "Typescript"}, {tag: "All"}]},
+  {name: "", title:'Restuarant Landing Page', imgUrl: images.about02, description: "The key to fine dining", codeLink: 'https://github.com/KcPele/restuarant-landing-page', projectLink: "https://restuarant-landing-page.vercel.app/", tags: [{tag: "React JS"}, {tag: "All"}, {tag: "All"}]},
   // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
   // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
   // {name: "", title:'', imgUrl: images.about02, description: "", codeLink: '', projectLink: "", tags: [{tag: ""}, {tag: ""}, {tag: "All"}]},
