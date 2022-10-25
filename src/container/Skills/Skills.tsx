@@ -1,29 +1,13 @@
-import React, { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 
-// import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from "../../client";
 import "./Skills.scss";
-import { ExperienceI, ExWorkI, SkillI } from "../../models";
+import {  ExWorkI } from "../../models";
 import { NavigationDots, SocialMedia } from "../../components";
-
+import { skills, experiences } from "../../constants/data";
 const Skills = () => {
-  const [experiences, setExperiences] = useState<ExperienceI[]>([]);
-  const [skills, setSkills] = useState<SkillI[]>([]);
 
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query).then((data: ExperienceI[]) => {
-      setExperiences(data);
-    });
-
-    client.fetch(skillsQuery).then((data: SkillI[]) => {
-      setSkills(data);
-    });
-  }, []);
 
   return (
     <motion.div
@@ -49,7 +33,7 @@ const Skills = () => {
                     className="app__flex"
                     style={{ backgroundColor: skill.bgColor }}
                   >
-                    <img src={urlFor(skill.icon).url()} alt={skill.name} />
+                    <img src={skill.icon} alt={skill.name} />
                   </div>
                   <p className="p-text">{skill.name}</p>
                 </motion.div>

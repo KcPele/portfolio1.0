@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { images } from '../../constants';
-import { client } from '../../client';
 import './Footer.scss';
 
 import { NavigationDots, SocialMedia } from '../../components';
@@ -22,21 +21,18 @@ const Footer = () => {
     setLoading(true);
 
     const contact = {
-      _type: 'contact',
+     
       name: username,
       email: email,
       message: message,
     };
+    //handle the submission
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-        setUsername('')
-        setEmail('')
-        setMessage('')
-      })
-      .catch((err) => console.log(err));
+      setLoading(false);
+      setIsFormSubmitted(true);
+      setUsername('')
+      setEmail('')
+      setMessage('')
   };
 
   return (

@@ -8,13 +8,14 @@ interface imageI {
 }
 interface SimilarI {
   name: string,
-  imgUrl: imageI,
+  imgUrl: string,
 }
 
 export interface HeadI extends SimilarI {
     _createdAt: string
 }
 export interface AboutInterface {
+  id: Number,
   title: string;
   description: string;
   imgUrl: string;

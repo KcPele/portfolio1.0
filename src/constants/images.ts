@@ -24,9 +24,13 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
-import circle from '../assets/circle.svg';
+// import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
-
+import fastapi from "../assets/fastapi.png";
+import django from "../assets/django.png"
+import nibble from "../assets/nibble.png";
+import metlab from "../assets/metlab.png";
+import solidity from "../assets/solidity.png";
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
 import asus from '../assets/asus.png';
@@ -60,7 +64,12 @@ export default {
   about03,
   about04,
   profile,
-  circle,
+  // circle,
+  fastapi,
+  django,
+  solidity,
+  nibble,
+  metlab,
   logo,
   adidas,
   amazon,

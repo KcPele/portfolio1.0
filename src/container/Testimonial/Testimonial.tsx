@@ -1,33 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-import { urlFor, client } from '../../client';
-import './Testimonial.scss';
-import { TestimonialI, BrandI } from '../../models';
-import { NavigationDots, SocialMedia } from '../../components';
 
+import './Testimonial.scss';
+
+import { NavigationDots, SocialMedia } from '../../components';
+import { testimonials, brands } from '../../constants/data';
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState<TestimonialI[]>([]);
-  const [brands, setBrands] = useState<BrandI[]>([]);
+
 
   const handleClick = (index: number) => {
     setCurrentIndex(index);
   };
 
-  useEffect(() => {
-    const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
 
-    client.fetch(query).then((data: TestimonialI[]) => {
-      setTestimonials(data);
-    });
-
-    client.fetch(brandsQuery).then((data: BrandI[]) => {
-      setBrands(data);
-    });
-  }, []);
 
   return (
     <motion.div
@@ -41,7 +29,7 @@ const Testimonial = () => {
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
-            <img src={urlFor(testimonials[currentIndex].imgUrl).url()} alt={testimonials[currentIndex].name} />
+            <img src={testimonials[currentIndex].imgUrl} alt={testimonials[currentIndex].name} />
             <div className="app__testimonial-content">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
               <div>
@@ -70,7 +58,7 @@ const Testimonial = () => {
             transition={{ duration: 0.5, type: 'tween' }}
             key={brand._id}
           >
-            <img src={urlFor(brand.imgUrl).url()} alt={brand.name} />
+            <img src={brand.imgUrl} alt={brand.name} />
           </motion.div>
         ))}
       </div>
